@@ -19,7 +19,8 @@ provider "aws" {
 resource "aws_security_group" "server-security" {
   name        = "terraform-example-sg"
   description = "Security group for Terraform example"
-  vpc_id      = "vpc-0ed19d3f73f808d94"  # Replace with your VPC ID
+   vpc_security_group_ids = [aws_security_group]
+  # Replace with your VPC ID
 
   # Allow incoming SSH traffic
   ingress {
