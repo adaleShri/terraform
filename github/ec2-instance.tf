@@ -16,7 +16,7 @@ provider "aws" {
 
 
 # Create a security group aws
-resource "aws_security_group" "server-security" {
+resource "aws_security-1" "server-security" {
   name        = "terraform-example-sg"
   description = "Security group for Terraform example"
   vpc_id      = "vpc-0ed19d3f73f808d94"  # Replace with your VPC ID
@@ -49,7 +49,7 @@ resource "aws_instance" "terrafrom-server" {
   key_name      = "krishna.pem"  # Replace with your key pair name
 
   # Associate the security group
-  vpc_security_group_ids = [aws_security_group.example_sg.id]
+  vpc_security_group_ids = [aws_security-1]
 
   tags = {
     Name = "terraform-sg-1"
