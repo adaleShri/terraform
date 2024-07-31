@@ -29,7 +29,7 @@ resource "aws_security_group" "example_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # Allow all outbound traffic  hhhhhh
+  # Allow all outbound traffic  hwwwww
   egress {
     from_port   = 0
     to_port     = 0
