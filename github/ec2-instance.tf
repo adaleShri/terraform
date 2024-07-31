@@ -10,7 +10,7 @@ provider "aws" {
     region = "ap-south-1"
     #shared_config_files = ["/home/ubuntu/.aws/config"]
     #shared_credentials_files = ["/home/ubuntu/.aws/credentials"] 
-     #profile = "krishna" 
+     #profile = "krishna"    # profile name
  }
 
 
