@@ -43,7 +43,7 @@ resource "aws_security_group" "example_sg" {
 }
 
 # Create an EC2 instance
-resource "aws_instance" "example_instance" {
+resource "aws_instance" "terrafrom-server" {
   ami           = "ami-068e0f1a600cd311c"  # Replace with your preferred AMI ID
   instance_type = "t2.micro"
   key_name      = "krishna.pem"  # Replace with your key pair name
