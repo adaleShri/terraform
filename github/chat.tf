@@ -47,7 +47,7 @@ resource "aws_security_group" "server_security" {
 }
 
 # Create an EC2 instance
-resource "aws_instance" "linux-instance" {
+resource "aws_instance" "linux-server-instance" {
   ami           = "ami-068e0f1a600cd311c"  # Replace with your preferred AMI ID
   instance_type = "t2.micro"
   key_name      = "krishna.pem"  # Replace with your key pair name
