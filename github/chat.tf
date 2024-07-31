@@ -56,6 +56,6 @@ resource "aws_instance" "linux_server" {
   vpc_security_group_ids = [aws_security_group.server_security.id]
 
   tags = {
-    Name = "terraform-sg-1"
+    Name = "linux-server-instance"
   }
 }
