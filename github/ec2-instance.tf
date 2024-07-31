@@ -8,12 +8,13 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-south-1"
+    region = "ap-south-1"
+  
 }
 
 
 
-# Create a security group
+# Create a security group aws
 resource "aws_security_group" "example_sg" {
   name        = "terraform-example-sg"
   description = "Security group for Terraform example"
