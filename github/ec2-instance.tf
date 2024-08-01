@@ -17,8 +17,8 @@ provider "aws" {
 
 # Create a security group aws
 resource "aws_security_group" "server_security" {
-  name        = "terraform-example-sg"
-  description = "Security group for Terraform example"
+  name        = "server_security"
+  description = "Security group for the server"
    vpc_security_group_ids = [aws_security_group.server_security.id]
   # Replace with your VPC ID
 
