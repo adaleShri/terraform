@@ -19,7 +19,7 @@ provider "aws" {
 resource "aws_security_group" "server_security" {
   name        = "server_security"
   description = "Security group for the server"
-   vpc_security_group_ids = [aws_security_group.server_security.id]
+   
   # Replace with your VPC ID
 
   # Allow incoming SSH traffic
