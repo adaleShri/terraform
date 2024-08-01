@@ -47,7 +47,7 @@ resource "aws_security_group" "server_security" {
 resource "aws_instance" "terrafrom-server" {
   ami           = "ami-068e0f1a600cd311c"  # Replace with your preferred AMI ID
   instance_type = "t2.micro"
-  key_name      = "krishna.pem"  # Replace with your key pair name
+  key_name      = "krishna"  # Replace with your key pair name
 
   # Associate the security group
   vpc_security_group_ids = [aws_security_group.server_security.id]
