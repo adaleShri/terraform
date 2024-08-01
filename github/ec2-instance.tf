@@ -16,10 +16,10 @@ provider "aws" {
 
 
 # Create a security group aws
-resource "aws_security_group" "server-security" {
+resource "aws_security_group" "server_security" {
   name        = "terraform-example-sg"
   description = "Security group for Terraform example"
-   vpc_security_group_ids = [aws_security_group.launch-wizard-5.id]
+   vpc_security_group_ids = [aws_security_group.server_security.id]
   # Replace with your VPC ID
 
   # Allow incoming SSH traffic
@@ -50,7 +50,7 @@ resource "aws_instance" "terrafrom-server" {
   key_name      = "krishna.pem"  # Replace with your key pair name
 
   # Associate the security group
-  vpc_security_group_ids = [aws_security_group.launch-wizard-5.id]
+  vpc_security_group_ids = [aws_security_group.server_security.id]
 
   tags = {
     Name = "terraform-sg-1"
