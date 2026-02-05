@@ -14,7 +14,7 @@ provider "aws" {
 resource "aws_instance" "test_instance" {
   ami           = "ami-019715e0d74f695be"
   instance_type = "t3.micro"
-  key_name      = "ne-ac-key"   # <-- NO .pem file
+  key_name      = "new-ac-key"   # <-- NO .pem file
 
   tags = {
     Name = "terraform-created-ec2"
@@ -30,3 +30,4 @@ output "instance_id" {
 output "public_ip" {
   value = aws_instance.test_instance.public_ip
 }
+
